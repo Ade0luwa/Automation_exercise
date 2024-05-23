@@ -3,7 +3,7 @@ const data=require('../fixtures/data.json')
 const username = data.valid_Username_Password.username
 const password = data.valid_Username_Password.password
 
-describe( "Login Module",
+describe( "sorting items",
     {
         viewportWidth: 1536,
         viewportHeight: 960
