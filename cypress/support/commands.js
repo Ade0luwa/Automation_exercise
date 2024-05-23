@@ -34,6 +34,10 @@ Cypress.Commands.add('addToCart', () => {
     landingLoginPage.selectGreenShirt().click()
     cy.wait(500)
     landingLoginPage.cartSuccess().should('have.text', addToCartSuccess)
+    landingLoginPage.selectContinueShoppingBtn().click()
+    landingLoginPage.selectSummerWhiteTop().click()
+    cy.wait(500)
+    landingLoginPage.cartSuccess().should('have.text', addToCartSuccess)
     cy.wait(1000)
 })
 
@@ -80,7 +84,7 @@ Cypress.Commands.add('SortAndPrintItems', () => {
             // get the product info name
             const productText = Cypress.$(product).find('.productinfo h2').text();
             // get the price numbers from price text
-            const price = parseFloat(productText.replace(/[^0-9.-]+/g, ''));
+            const price = parseFloat(productText.replace(/^\D+/g, ''));
 
             productItems.push({ label, price });
         });

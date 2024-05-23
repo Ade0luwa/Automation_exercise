@@ -23,7 +23,13 @@ class LandingLoginPage{
         return cy.get('#Women > .panel-body > ul > :nth-child(2)')
     }
     selectGreenShirt(){
-        return cy.get(':nth-child(7) > .product-image-wrapper > .single-products > .productinfo > .btn')
+        return cy.get(':nth-child(10) > .product-image-wrapper > .single-products > .productinfo > .btn')
+    }
+    selectSummerWhiteTop(){
+        return cy.get(':nth-child(8) > .product-image-wrapper > .single-products > .productinfo > .btn')
+    }
+    selectContinueShoppingBtn(){
+        return cy.get('.modal-footer > .btn')
     }
     cartSuccess(){
         return cy.get('.modal-body > :nth-child(1)')
