@@ -63,7 +63,7 @@ Cypress.Commands.add('completePayment', () => {
     landingLoginPage.getExpiryMonth().type(month)
     landingLoginPage.getExpiryYear().type(year)
     landingLoginPage.getPayBtn().click()
-    cy.wait(1000)
+    cy.wait(500)
 
     //verifying that the order has been placed
     landingLoginPage.getOrderPlacedLbl().should('have.text', orderPlacedLbl)
